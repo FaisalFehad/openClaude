@@ -1,0 +1,35 @@
+{
+  "port": 8082,
+
+  "providers": {
+    "deepinfra": {
+      "url": "https://api.deepinfra.com/v1/openai/chat/completions",
+      "apiKeyEnv": "DEEPINFRA_API_KEY",
+      "apiKeyCmd": "security find-generic-password -a deepinfra -s deepinfra-api-key -w"
+    },
+    "together": {
+      "url": "https://api.together.xyz/v1/chat/completions",
+      "apiKeyEnv": "TOGETHER_API_KEY"
+    },
+    "openrouter": {
+      "url": "https://openrouter.ai/api/v1/chat/completions",
+      "apiKeyEnv": "OPENROUTER_API_KEY"
+    },
+    "groq": {
+      "url": "https://api.groq.com/openai/v1/chat/completions",
+      "apiKeyEnv": "GROQ_API_KEY"
+    },
+    "fireworks": {
+      "url": "https://api.fireworks.ai/inference/v1/chat/completions",
+      "apiKeyEnv": "FIREWORKS_API_KEY"
+    }
+  },
+
+  "models": {
+    "qwen3-max": "deepinfra/Qwen/Qwen3-Max",
+    "qwen3-max-thinking": "deepinfra/Qwen/Qwen3-Max-Thinking",
+    "kimi-k2.5": "deepinfra/moonshotai/Kimi-K2.5",
+    "llama-4-scout": "together/meta-llama/Llama-4-Scout-17B-16E-Instruct",
+    "deepseek-r1": "together/deepseek-ai/DeepSeek-R1"
+  }
+}
